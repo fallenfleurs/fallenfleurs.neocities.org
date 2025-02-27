@@ -21,11 +21,6 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Install deps and build
-        run: |
-          npm i
-          npm run build
-
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3
         with:

@@ -1,0 +1,75 @@
+:root {
+    --entrybg: rgba(255, 236, 245, 0.6);
+    --h2bg: rgba(255, 139, 196, 0.6);
+    
+    --white: #FFF;
+    --lightpink: #FFECF5;
+    --pink: #FFD2E9;
+    --darkpink: #FF8BC4;
+    --darkestpink: #63133B;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: "Emilys Candy", serif;
+    background-image: url('https://fallenfleurs.neocities.org/assetsandimages/a7ebba54a34b6d380ff92d0af4d8dea8.jpg');
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+  }
+  header {
+      background-image: url('https://fallenfleurs.neocities.org/assetsandimages/534d741f8a7ff21c66204b222c60c0bb.jpg');
+      color: var(--pink);
+      padding: 10px;
+      text-align: center;
+      text-shadow: 0 0 5px var(--darkestpink), 0 0 5px var(--darkestpink), 0 0 5px var(--darkestpink);
+  }
+  section {
+      padding: 20px;
+  }
+  article {
+      background-image: url('https://fallenfleurs.neocities.org/assetsandimages/move_heart.gif');
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px var(--darkpink);
+      border: 2px dashed var(--white);
+  }
+  
+  article h2 {
+    background-color: var(--h2bg);
+    padding: 5px 10px;
+    margin: 5px 0;
+    color: #FFF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 2px;
+  }
+  
+  .entry {
+    background-color: var(--entrybg);
+    padding: 5px 15px;
+    border: 2px solid var(--h2bg);
+    color: var(--darkestpink);
+    border-radius: 5px;
+  }
+  
+  .entry p {
+    margin: 7px 0;
+  }
+  
+  .entry li {
+    list-style: "â™¡ ";
+  }
+  
+  #diarycontainer {
+    max-width: 900px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #FFECF5;
+  }
+  

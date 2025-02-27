@@ -1,0 +1,452 @@
+/*////////////////////////////////////
+            ROOT VARIABLES
+  this is an easy way to organize variables
+  across your coding. simply change colors here
+  and it will affect everything.
+////////////////////////////////////*/
+
+:root {
+    --backgroundcolor: #000;
+    --contentboxcolor: #000;
+    --contrastcolor: #FFF;
+    --neutralcolor: grey;
+    --accentcolor: red;
+    --accenthighlight: maroon;
+    
+    --headerborderwidth: 1px;
+    --mainboxborderwidth: 1px;
+    --leftboxborderwidth: 1px;
+    
+    --mainfont: monospace;
+    --headerfont: georgia;
+  }
+  
+  /*////////////////////////////////////
+                  BODY
+    this is the body of the page.
+    it tells what color the background is,
+    the main font color, the main font.
+  ////////////////////////////////////*/
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--backgroundcolor);
+    color: var(--contrastcolor);
+    font-family: var(--mainfont);
+    font-size: 12px;
+    padding-top: 20px;
+  }
+  
+  /*////////////////////////////////////
+                  LINKS
+    hyperlinks are referred to by "a" in
+    HTML. you can create a hyperlink simply
+    by doing:
+    
+    <a href="URL HERE">LINK</a>
+  ////////////////////////////////////*/
+  
+  a {
+    color: var(--accentcolor);
+  }
+  
+  a:hover {
+    color: var(--accenthighlight);
+  }
+  
+  /*////////////////////////////////////
+                    IDs
+    IDs are denoted by a # before their name.
+    
+    IDs can only be used ONCE in a single .html page.
+  ////////////////////////////////////*/
+  
+  
+    /* THIS IS THE CONTENT WRAPPER, IT CONTAINS ALL YOUR CONTENT AND PREVENTS IT FROM BLEEDING ALL OVER YOUR SITE */
+  #contentwrapper {
+    /* WIDTH OF THE WRAPPER */
+    width: 900px;
+    
+    /* CENTER THE WRAPPER */
+    margin-right: auto;
+    margin-left: auto;
+    
+    /* ADD PADDING AND SPACING */
+    margin-top: 10px;
+  }
+  
+    /* THIS FLEX CONTAINER CONTAINS THE SIDEBAR AND THE MAIN CONTENT */
+  #contentcontainer {
+    /* WIDTH OF THE CONTAINER */
+    width: 900px;
+    
+    /* CENTER THE CONTAINER */
+    margin-right: auto;
+    margin-left: auto;
+    
+    /* ADD PADDING AND SPACING */
+    margin-top: 10px;
+    
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+    /* THIS IS YOUR PAGE'S HEADER IMAGE */
+  #mainheader {
+    background-image:url("https://i.imgur.com/Bfi3ph1.gif");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    width: 900px;
+    height: 120px;
+    display: table-cell;
+    vertical-align: middle;
+    border-color: var(--contrastcolor); 
+    border-width: var(--leftboxborderwidth);
+    border-style: solid;
+    font-family: var(--headerfont);
+  }
+  
+    /* THIS IS THE MAIN BOX AND WHERE YOU PUT YOUR CONTENT IN */
+  #mainbox {
+    background-color: var(--contentboxcolor);
+    width: 720px;
+    height: 600px;
+    padding: 15px;
+    margin-left: 10px;
+    overflow: auto;
+    border-color: var(--contrastcolor); 
+    border-width: var(--mainboxborderwidth);
+    border-style: solid;
+    font-family: var(--mainfont);
+  }
+  
+    /* THIS IS YOUR SIDEBAR, PUT LINKS IN IT OR SOMETHING */
+  #leftbox {
+    background-color: var(--contentboxcolor);
+    width: 170px;
+    height: 600px;
+    padding: 10px;
+    border-color: var(--contrastcolor); 
+    border-width: var(--leftboxborderwidth);
+    border-style: solid;
+    font-family: var(--mainfont);
+    overflow: auto;
+    
+  }
+  
+    /* THIS IS THE NAVIGATION LIST CODING, GOOD FOR LINKS */
+  #leftbox ul {
+    list-style: 'x '; 
+    margin: 2px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  
+  /*////////////////////////////////////
+                CLASSES
+                
+    here are some basic classes i've coded for you.
+    classes are denoted by a . before their name.
+    
+    classes can be used MULTIPLE times in a single .html page.
+    
+    since these can be used multiple times throughout
+    your code, this makes them very useful for quickly 
+    applying attributes to an element.
+    
+    you can add classes to any type of element on
+    your .html pages by simply adding: 
+    
+      class="yourclass"
+    
+    ... to the element.
+    
+    i.e: 
+    
+      <div class="centered">
+        this is a div with centered text
+      </div>
+      
+      <p class="centered">
+        this text is centered
+      </p>
+      
+      <div class="centeredelement"> 
+        this is a centered div
+      </div>
+    
+    
+    you can combine classes, too:
+    
+      <div class="centeredelement centered"> 
+        this is a centered div with centered text
+      </div>
+  ////////////////////////////////////*/
+  
+    /* CENTERS THE TEXT IN AN ELEMENT */
+  .centered {
+    text-align: center;
+  }
+  
+    /* CENTERS AN ELEMENT (DIV, TABLE, ETC) */
+  .centeredelement {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+    /* BRIGHT BOX IN CASE YOU WANNA ADD CONTENT WARNINGS OR SOMETHING */
+  .warning {
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    background: var(--contrastcolor);
+    color: var(--backgroundcolor);
+  }
+  
+    /* CODING FOR FANCY <ul> LISTS */
+  .customul {
+    margin-bottom: 0;
+    margin-top: 5px;
+    
+    /* CHANGE THE x TO CHANGE THE BULLET */
+    list-style: "x "; 
+  }
+  
+  .customul li {
+    padding-bottom: 7px;
+  }
+  
+    /* CUSTOM <hr> LINES */
+  .mainhr {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    clear: both;
+    border-color: var(--contrastcolor); 
+    border-width: 1px 0 0 0;
+    border-style: solid;
+  }
+  
+  .navhr {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    clear: both;
+    border-color: var(--contrastcolor); 
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    margin: 15px 0 15px 0;
+  }
+  
+    /* FLOAT AN ELEMENT LEFT */
+  .floatleft {
+    float: left;
+    padding: 5px 25px 25px 5px;
+  }
+  
+    /* FLOAT AN ELEMENT RIGHT */
+  .floatright {
+    float: right;
+    padding: 5px 5px 25px 25px;
+  }
+  
+    /* CHANGES THE APPEARANCE OF A <textarea> BOX */
+  .customtextarea {
+    background-color: var(--backgroundcolor);
+    width: 100px;
+    height: 40px;
+    border-color: var(--contrastcolor); 
+    border-width: 1px;
+    border-style: solid;
+    color: var(--contrastcolor);
+    font-family: var(--mainfont);
+    font-size: 10px;
+  }
+  
+  /*////////////////////////////////////
+                HEADERS
+    these are headers, aka the big text
+    you see before paragraphs to let people
+    know what they're about to read. 
+    
+    each header is numbered, and you can 
+    surround your headers with the respective 
+    tag to utilize them in your .html pages.
+    
+    i.e: 
+      <h1>BIG HEADER</h1>
+      <h2>SLIGHTLY LESS BIG HEADER</h2>
+  ////////////////////////////////////*/
+  
+  h4 {
+    font-size: 15px;
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  h1 { 
+    font-size: 35px;
+    margin: 0;
+  }
+  
+  h1, h2, h3, h4 {
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    font-family: var(--headerfont);
+  }
+  
+  /*////////////////////////////////////
+                SCROLLBAR
+    this is the coding for the scrollbar.
+    edit the colors and size as you please.
+  ////////////////////////////////////*/
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: var(--contrastcolor);
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    width: 0px;  
+    background: var(--backgroundcolor);
+    border-color: var(--contrastcolor); 
+    border-width: 1px;
+    border-style: solid;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: var(--contrastcolor);
+    border-color: var(--contrastcolor); 
+    border-width: 1px;
+    border-style: solid;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--backgroundcolor);  
+  }
+  
+  /*////////////////////////////////////
+                COLLAPSIBLES
+    these are collapsible spoilers you can use to
+    hide content. if you don't know what you're doing,
+    i would suggest not messing with anything.
+    
+  ////////////////////////////////////*/
+  
+  
+  input[type='checkbox'] { 
+    display: none; 
+  } 
+  
+  .collapsible-content {
+    height: 0px;
+    overflow: hidden;
+    background-color: var(--neutralcolor);
+    color: var(--backgroundcolor);
+  } 
+  
+  .collapsible-content a {
+    color: var(--contrastcolor);
+  }
+  
+  .lbl-toggle { 
+    display: block; 
+    padding: 10px; 
+    cursor: pointer; 
+    transition: all 0.25s ease-out; 
+    color: var(--backgroundcolor); 
+    background: var(--neutralcolor); 
+    font-size: 16px; 
+    text-transform: uppercase; 
+  } 
+  
+  .lbl-toggle::before { 
+    content: ' '; 
+    display: inline-block; 
+    border-top: 5px solid transparent; 
+    border-bottom: 5px solid transparent; 
+    border-left: 5px solid currentColor; 
+    vertical-align: middle; margin-right: .7rem; 
+    transform: translateY(-2px); transition: transform .2s ease-out; 
+  } 
+  
+  .toggle:checked+.lbl-toggle::before { 
+    transform: rotate(90deg) translateX(-3px); 
+  } 
+  
+  .toggle:checked + .lbl-toggle + .collapsible-content { 
+    height: auto; 
+  }
+  
+  .collapsible-content .content-inner { 
+    padding: 0 10px 0 10px;
+  } 
+  
+  /*////////////////////////////////////
+                MEDIA QUERY
+    allows the layout to scale properly
+    on mobile when screen is under 600px.
+    don't touch unless you know what you're doing.
+  ////////////////////////////////////*/
+  
+  @media all and (max-width: 600px) {
+    
+    #contentwrapper, #contentcontainer, #characterheader, #leftprofile, #profilecontainer, #profilewrapper, #profilebox, #warningbox, #profilebox, #leftprofile, #mainbox, #leftbox, #characterbox, #gallerybox  {
+      width: 100% !important;
+    }
+      
+      #profilecontainer, #profilewrapper, #profilebox, #warningbox, #profilebox, #mainbox, #characterbox, #gallerybox {
+          height: 500px;
+      }
+      
+    #profilewrapper, #mainbox, .characterrowlong {
+      margin: 0 !important;
+    }
+      
+    #leftbox {
+      height: auto;
+      text-align: center;
+      margin: 10px 0;
+    }
+    
+    #leftbox ul, #leftprofile ul {
+      list-style: none;
+    }
+  
+    #contentcontainer {
+      display: block;
+    }
+      
+    .profilefloatleft, .profilefloatright, .characteravatar {
+      display: block;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+      
+    .spacerimg {
+      width: 100%;
+    }
+    
+    .characterrowlong {
+    flex-wrap: wrap;
+    }
+    
+    .charactercardlong {
+    margin: 5px 0 !important;
+    }
+      
+  }
